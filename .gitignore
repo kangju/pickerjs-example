@@ -3,3 +3,7 @@ node_modules
 
 # OSX
 .DS_Store
+
+#parcel
+dist
+.parcel-cache
