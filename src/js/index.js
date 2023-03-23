@@ -8,18 +8,12 @@ const timepickerEl = document.querySelector('#timepicker');
  * ピッカーコンテナのスタイルを初期化する
  */
 const initPickerContainerStyle = () => {
-    // ピッカーコンテナを非表示にする
-    pickerContainerEl.style.display = 'none';
-
-    // ピッカーコンテナの幅をtimepickerElと同じにする
-    pickerContainerEl.style.width = `${timepickerEl.offsetWidth}px`;
-
-    // ピッカーコンテナの位置をtimepickerElと同じにする
-    pickerContainerEl.style.left = `${timepickerEl.offsetLeft}px`;
-    pickerContainerEl.style.top = `${timepickerEl.offsetTop + timepickerEl.offsetHeight}px`;
-
     // ピッカーコンテナのスタイルを設定する
     Object.assign(pickerContainerEl.style, {
+        display: 'none',
+        width: `${timepickerEl.offsetWidth}px`,
+        left: `${timepickerEl.offsetLeft}px`,
+        top: `${timepickerEl.offsetTop + timepickerEl.offsetHeight}px`,
         position: 'fixed',
         zIndex: 999,
     });
